@@ -1,1 +1,3 @@
 # Checkpoint_Sorting_and_searching_algorithms
+## Trie par insertion
+L'algorithme de tri par insertion commence par parcourir le tableau tab à partir de l'élément à l'indice 1 (car le premier élément est déjà considéré trié). Il stocke la valeur de l'élément actuel dans key et utilise j pour parcourir les éléments déjà triés vers la gauche. Tant que j est supérieur ou égal à zéro et que l'élément actuel est plus petit que key, il déplace les éléments vers la droite. Enfin, il insère la valeur de key à la bonne position dans le tableau trié. Cette procédure est répétée pour chaque élément du tableau, aboutissant ainsi à un tableau trié par ordre croissant.

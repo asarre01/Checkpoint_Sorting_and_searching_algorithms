@@ -1,0 +1,19 @@
+ALGORITHM insertion_sort
+VAR
+    tab: ARRAY_OF INTEGER[8];   // Déclaration d'un tableau d'entiers de taille 8
+    i, j, key: INTEGER := 0;    // Déclaration de variables entières i, j et key, initialisées à 0
+BEGIN
+    tab := {1, 7, 3, 9, 5, 12, 8, 4};  // Initialisation du tableau avec des valeurs
+
+    FOR i FROM 1 TO tab.length - 1 DO  // Boucle FOR de i allant de 1 à la longueur du tableau - 1
+        key := tab[i];                  // Stocke la valeur actuelle de tab[i] dans la variable key
+        j := i - 1;                     // Initialise j à i - 1
+
+        WHILE (j >= 0 AND tab[j] > key) DO  // Boucle WHILE tant que j est supérieur ou égal à 0 et tab[j] est supérieur à key
+            tab[j + 1] := tab[j];           // Déplace tab[j] vers la droite (décalage)
+            j := j - 1;                     // Décrémente j
+        END_WHILE
+
+        tab[j + 1] := key;    // Insère la valeur de key à la bonne position dans le tableau
+    END_FOR
+END
